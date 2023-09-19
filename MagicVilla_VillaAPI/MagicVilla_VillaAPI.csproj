@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Logging\**" />
+    <Compile Remove="log\**" />
+    <Content Remove="Logging\**" />
+    <Content Remove="log\**" />
+    <EmbeddedResource Remove="Logging\**" />
+    <EmbeddedResource Remove="log\**" />
+    <None Remove="Logging\**" />
+    <None Remove="log\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
