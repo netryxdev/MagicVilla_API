@@ -1,3 +1,3 @@
-# MagicVilla_API
+# MagicVilla
 
-My first API made with .NET Core (ASP.NET Core) and SQL server
+Full stack app (Api & Front-end) made with ASP.NET Core, Razor Pages and SQL server
