@@ -1,3 +1,3 @@
 # MagicVilla
 
-Api & Front-end made with ASP.NET Core, Razor Pages and SQL server
+Api made with ASP.NET, Razor Pages (Front-end) and SQL server (DB)
