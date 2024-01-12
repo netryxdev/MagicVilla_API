@@ -1,5 +1,5 @@
-﻿@model IEnumerable<MagicVilla_Web.Models.Dto.VillaDTO>
-@using Microsoft.AspNetCore.Components
+﻿@using Microsoft.AspNetCore.Components
+@model IEnumerable<MagicVilla_Web.Models.Dto.VillaDTO>
 
 <img class="d-block w-100" src="~/images/home/slide1.jpg" alt="" />
 
@@ -7,11 +7,11 @@
 <div class="row" style="--bs-gutter-x:0">
     @foreach (var villa in Model)
             {
+            <div class="p-4 col-md-12 col-lg-6">
                 <div class="row" style="border-radius: 20px; border: 1px solid #ffffff">
                     <img class="d-block w-100" style="border-radius: 20px;" src="@villa.ImageUrl" alt="First slide" />
-                </div>
                 <div class="col-8">
-                    <p class="card-title text-warning" style="fonr-size:xx-large">@villa.Name</p>
+                    <p class="card-title text-warning" style="font-size:xx-large">@villa.Name</p>
                     <p class="card-text">
                         @((MarkupString)villa.Details)
                     </p>
@@ -35,5 +35,7 @@
                         </div>
                     </div>
                 </div>
+                </div>
+            </div>
             }
 </div>
