@@ -25,8 +25,8 @@
                     <td>@item.Villa.Name</td>
                     <td>@item.VillaNo</td>
                     <td>
-                        <a asp-controller="Villa" asp-action="UpdateNumberVilla" asp-route-villaId="@item.VillaNo" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i></a>
-                        <a asp-controller="Villa" asp-action="DeleteNumberVilla" asp-route-villaId="@item.VillaNo" class="btn btn-outline-primary"><i class="bi bi-trash-fill"></i></a>
+                        <a asp-controller="VillaNumber" asp-action="UpdateVillaNumber" asp-route-villaNo="@item.VillaNo" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i></a>
+                        <a asp-controller="VillaNumber" asp-action="DeleteVillaNumber" asp-route-villaNo="@item.VillaNo" class="btn btn-outline-primary"><i class="bi bi-trash-fill"></i></a>
                     </td>
                 </tr>
             }
