@@ -68,8 +68,9 @@ namespace MagicVilla_Web.Controllers
                 }
                 else
                 {
-                    if (response.ErrorMessages.Count > 0)
+                    if (response?.ErrorMessages?.Count > 0)
                     {
+                        TempData["error"] = "Error encountered";
                         ModelState.AddModelError("ErrorMessages", response.ErrorMessages.FirstOrDefault());
                     }
                 }
@@ -84,6 +85,7 @@ namespace MagicVilla_Web.Controllers
                         Text = i.Name,
                         Value = i.Id.ToString()
                     });
+                TempData["success"] = "Villa created successfully!";
             }
             return View(model);
         }
@@ -123,12 +125,14 @@ namespace MagicVilla_Web.Controllers
 
                 if (response != null && response.IsSuccess)
                 {
+                    TempData["success"] = "Villa updated successfully!";
                     return RedirectToAction(nameof(IndexVillaNumber));
                 }
                 else
                 {
                     if (response?.ErrorMessages?.Count > 0)
                     {
+                        TempData["error"] = "Error encountered";
                         ModelState.AddModelError("ErrorMessages", response.ErrorMessages.FirstOrDefault());
                     }
                 }
@@ -143,6 +147,7 @@ namespace MagicVilla_Web.Controllers
                         Text = i.Name,
                         Value = i.Id.ToString()
                     });
+                TempData["success"] = "Villa updated successfully!";
             }
             return View(model);
         }
@@ -180,9 +185,11 @@ namespace MagicVilla_Web.Controllers
 
             if (response != null && response.IsSuccess)
             {
+                TempData["success"] = "Villa deleted successfully!";
                 return RedirectToAction(nameof(IndexVillaNumber));
             }
 
+            TempData["error"] = "Error encountered";
             return View(model);
         }
     }
